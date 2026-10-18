@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Item \"Project\\\\x64\\\\Debug\\\\Project.log\",\"Project\\\\x64\\\\Release\\\\Project.log\" | Select-Object FullName,LastWriteTime,Length; Select-String -Path \"Project\\\\x64\\\\Debug\\\\Project.log\" -Pattern \"warning|error\" | Select-Object -First 40 | ForEach-Object { $_.Line })"
+    ]
+  }
+}
